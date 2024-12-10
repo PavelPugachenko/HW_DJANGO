@@ -1,11 +1,10 @@
 from django.shortcuts import render
 
 
-def home_page(request):
+def home(request):
     return render(request, 'catalog/home.html')
 
 
-def contacts_page(request):
+def contacts(request):
     return render(request, 'catalog/contacts.html')
 
-# Create your views here.
