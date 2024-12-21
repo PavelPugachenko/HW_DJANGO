@@ -1,5 +1,3 @@
-[tool.poetry]
-name = "hw-django"
 version = "0.1.0"
 description = ""
 authors = ["pavelpugacenko <pugachenkopavel72@gmail.com>"]
