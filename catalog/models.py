@@ -19,8 +19,8 @@ class Product(models.Model):
     description = models.TextField(verbose_name='описание продукта', blank=True, null=True)
     image = models.ImageField(upload_to='static/images', verbose_name='изображение', blank=True, null=True)
     price = models.IntegerField(verbose_name='цена за покупку')
-    created_at = models.DateField(verbose_name='дата создания', auto_now_add=True)
-    updated_at = models.DateField(verbose_name='дата последнего изменения', auto_now=True)
+    created_at = models.DateTimeField(verbose_name='дата создания')
+    updated_at = models.DateTimeField(verbose_name='дата последнего изменения')
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='products')
 
     def __str__(self):
@@ -30,8 +30,3 @@ class Product(models.Model):
         verbose_name = 'Продукт'
         verbose_name_plural = 'Продукты'
         ordering = ['name', 'price', 'created_at', 'category']
-
-
-from django.db import models
-
-# Create your models here.
